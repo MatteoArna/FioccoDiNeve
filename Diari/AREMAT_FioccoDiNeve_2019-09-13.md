@@ -9,6 +9,7 @@
 |--------------|--------------------------------------------|---------|
 |10:05-10:15| Aggiornato collegamento alla Specifica su github|   X    |
 |10:15-10:30| Aggiornato Requisiti|X|
+|10:30-14:15| Domande ai clienti rigurardo i requisiti|x|
 
 ## Problemi riscontrati e soluzioni addattate
 
