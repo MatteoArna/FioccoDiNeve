@@ -1,7 +1,7 @@
 # Requisiti
 |ID   |Requisito            |Categoria      |Priorità|Versione|
 |-----|---------------------|---------------|--------|--------|
-|001  |Creazione sito dal quale scaricare programma|Sito Web|1|1.0|
+|001  |Creazione sito dal quale scaricare programma|Sito Web|4|1.0|
 |002  |Con tasto sinistro si aggiunge un punto|Programma|2|1.0|
 |003|Bottone Fine/Done per quando si ha finito di fare il fiocco|Programma|2|1.0|
 |004  |Bottone reset dei punti|Programma|2|1.0|
