@@ -11,7 +11,8 @@
 |10:15-10:30| Aggiornato Requisiti|X|
 |10:30-14:15| Domande ai clienti rigurardo i requisiti|x|
 |14:15-15:00| Aggiornati requisiti|X|
-|15:00:15:15|Creazione Documentazione|X|
+|15:00:15:30|Creazione Documentazione|X|
+|15:30.16:30|Ricerca alternativa a Project|X|
 
 ## Problemi riscontrati e soluzioni addattate
 
