@@ -5,4 +5,4 @@
 ## Documenti
 - [Specifica](Documenti/Specifica.pdf)
 - [Requisiti](Documenti/requisiti.md)
-- [Documentazione](Documenti/Docmentazione.md)
+- [Documentazione](Documenti/Documentazione.md)
