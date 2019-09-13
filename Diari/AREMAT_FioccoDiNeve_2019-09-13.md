@@ -8,6 +8,7 @@
 |Orario        |Lavoro svolto                               |Soluzione|
 |--------------|--------------------------------------------|---------|
 |10:05-10:15| Aggiornato collegamento alla Specifica su github|   X    |
+|10:15-10:30| Aggiornato Requisiti|X|
 
 ## Problemi riscontrati e soluzioni addattate
 
