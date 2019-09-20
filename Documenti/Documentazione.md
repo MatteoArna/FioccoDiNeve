@@ -33,6 +33,7 @@ I mezzi disponibili per questo progetto sono:
 ---
 ### interfaccia grafica 
 - Sito Web
-    Il Sito Web conterrà una guida veloce (quick guide) sul programma e il link per scaricarlo. Il collegamento sarà a GitHub dove prendererà il file .jar, invece in github sarà disponibile anche il .class.       
+    Il Sito Web conterrà una guida veloce (quick guide) sul programma e il link per scaricarlo. Il collegamento sarà a GitHub dove prendererà il file .jar, invece in github sarà disponibile anche il .class. Il sito avrà circa il seguente layout:
+      
 - Programma
 
