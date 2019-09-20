@@ -9,6 +9,7 @@
 |--------------|--------------------------------------------|---------|
 |8:20 - 11:35| Pianificazione Gantt||
 |13:15-13:25|Ricerca di un'alternativa per Clickup a causa della prova limitata|1|
+|13:25 - 15:20| Stesura del gantt su ProjectLibre||
 
 ## Problemi riscontrati e soluzioni addattate
 1) Clickup è stato sostituito con ProjectLibre.

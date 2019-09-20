@@ -21,7 +21,8 @@ I requisiti sono elencati nella seguente tabella:
 [requisiti](requisiti.md)
 ### Use case
 ### Pianificazione
-[Gannt]()
+[Gantt Iniziale](FioccoIniziale.pdf)
+[Gantt Finale](FioccoAggiornato.pdf)
 ### Analisi dei mezzi
 I mezzi disponibili per questo progetto sono:
 <br>
@@ -30,5 +31,8 @@ I mezzi disponibili per questo progetto sono:
 3. Server Infomaniak
 ## Progettazione
 ---
-  
+### interfaccia grafica 
+- Sito Web
+    Il Sito Web conterrà una guida veloce (quick guide) sul programma e il link per scaricarlo. Il collegamento sarà a GitHub dove prendererà il file .jar, invece in github sarà disponibile anche il .class.       
+- Programma
 
