@@ -48,7 +48,7 @@ I mezzi disponibili per questo progetto sono:
         Nella scheda principale sarà possibile modificare il triangolo in modo da creare il fiocco di neve perfetto. Di default premendo sul triangolo creeremo un punto (che con tutti gli altri faranno il poligono per taglia il triangolo), ma è possibile anche eliminare i punti selezionato il radio-button "cut" e spostarli tenendone premuto uno e muovendo il mouse. Premendo il tasto reset il triangolo verrà ripristinato alla struttura iniziale. Spuntando il check box "live generation" sarà possibile visualizzare il fiocco di neve mentre aggiungiamo punti al triangolo e premendo su create snapshot faremo un salvataggio del triangolo attuale (se presenti due dello stesso il più vecchio verrà sovrascritto). Il bottone generate genererà il fiocco di neve (solo se live-generation sarà disattivato) senza salvarlo e il bottone save porterà alla schermata di salvataggio.
         <img src="../Img/SchedaPrincipale.jpg" alt="Scheda principale">
         Il menù di salvataggio conterrà in alto a sinistra un'anteprima del fiocco di neve che avremo appena creato mentre a destra le impostazioni di salvataggio. Queste opzioni saranno <i>Nome</i> (il nome del fiocco di neve, default SnowFlake \<idDelFiocco>), <i> Destinazione </i> (la destinazione dove salvare il fiocco, senza valore o con valore errato da errore), <i>Tipo</i> (a scelta tra png 500 x 500, png 1000 x 1000, svg; default png 500x500).
-        <img src="../Img/menuSalvataggio.jpg" alt="Menu Salvataggio"/>
+        <img src="../Img/MenuSalvataggio.jpg" alt="Menu Salvataggio"/>
 
 
 
