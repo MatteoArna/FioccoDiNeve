@@ -8,7 +8,8 @@
 |Orario        |Lavoro svolto                               |Soluzione|
 |--------------|--------------------------------------------|---------|
 |10:05 - 11:20| Mockup programma||
-|11:20 - | Aggiunta delle definizioni delle varie cose alla documentazione||
+|11:20 - 14:00| Aggiunta delle definizioni delle varie cose alla documentazione||
+|14:00 - 16:30| Creazione menu||
 
 
 ## Problemi riscontrati e soluzioni addattate
