@@ -1,6 +1,6 @@
 # Fiocco Di Neve | Diario di lavoro
 ##### Matteo Arena
-### SAMT, 06.09.2019
+### SAMT, 20.09.2019
 
 ## Lavori svolti
 
