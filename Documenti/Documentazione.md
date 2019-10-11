@@ -49,7 +49,6 @@ I mezzi disponibili per questo progetto sono:
         <img src="../Img/SchedaPrincipale.jpg" alt="Scheda principale">
         Il menù di salvataggio conterrà in alto a sinistra un'anteprima del fiocco di neve che avremo appena creato mentre a destra le impostazioni di salvataggio. Queste opzioni saranno <i>Nome</i> (il nome del fiocco di neve, default SnowFlake \<idDelFiocco>), <i> Destinazione </i> (la destinazione dove salvare il fiocco, senza valore o con valore errato da errore), <i>Tipo</i> (a scelta tra png 500 x 500, png 1000 x 1000, svg; default png 500x500).
         <img src="../Img/MenuSalvataggio.jpg" alt="Menu Salvataggio"/>
-
-
-
+### Struttura
+Il programma si basa su una classe che rappresenta il Frame e altre 3 che rappresentano le altre schermate (vedi sopra) e le disegna sopra al Frame.
 
