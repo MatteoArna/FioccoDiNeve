@@ -2,12 +2,12 @@
 ## Introduzione
 ---
 ### Informazioni sul progetto
-- Matteo Arena, 
+- Matteo Arena
 - Luca Muggiasca e Geo Petrini, <i>supervisori</i>
 - SAM, Informatica, Modulo 306
 - 06/09/2019 - 20/12/2019
 ### Abstract
-Il progetto Fiocco di Neve è un progetto da realizzare nel primo semestre del terzo anno nella Scuola Arti e Mestieri di Trevano della sezione Informatica. Questo progetto consiste nel realizzare un fiocco di neve partendo da una base rettangolare che poi verrà specchiato fino a creare il riusltato.
+Il progetto Fiocco di Neve è un progetto da realizzare nel primo semestre del terzo anno nella Scuola Arti e Mestieri di Trevano della sezione Informatica. Questo progetto consiste nel realizzare un fiocco di neve partendo da una base rettangolare (con angoli 30, 60, 90)che poi verrà specchiato fino a creare il riusltato.
 ### Scopo
 Fare un programma che da un triangolo ritagliato dall'utente generi un fiocco di neve che può essere salvato o modificato.
 
@@ -51,4 +51,7 @@ I mezzi disponibili per questo progetto sono:
         <img src="../Img/MenuSalvataggio.jpg" alt="Menu Salvataggio"/>
 ### Struttura
 Il programma si basa su una classe che rappresenta il Frame e altre 3 che rappresentano le altre schermate (vedi sopra) e le disegna sopra al Frame.
+## Implementazione
+
+
 
