@@ -7,7 +7,8 @@
 
 |Orario        |Lavoro svolto                               |Soluzione|
 |--------------|--------------------------------------------|---------|
-|10:05 - 10:40| Convertito programma a JFrame contenente JPanel|1|
+|10:05 - 1:35| Test||
+|11:35 - 16:30| Convertito programma a JFrame contenente JPanel|1|
 
 
 ## Problemi riscontrati e soluzioni addattate
