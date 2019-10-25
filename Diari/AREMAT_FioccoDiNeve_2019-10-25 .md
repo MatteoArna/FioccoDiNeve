@@ -16,3 +16,4 @@
 ## Punto della situazione rispetto alla pianificazione
 
 ## Programma di massima per la prossima giornata di lavoro
+trasformare tutti in JFrame contenente JPanel
