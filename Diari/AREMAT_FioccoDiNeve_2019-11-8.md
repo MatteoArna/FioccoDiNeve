@@ -7,11 +7,13 @@
 
 |Orario        |Lavoro svolto                               |Soluzione|
 |--------------|--------------------------------------------|---------|
-|10:05 - 16:30| Ridimensionamento triangolo e dei punti
+|10:05 - 1:35| Test||
+|11:35 - 16:30| Convertito programma a JFrame contenente JPanel|1|
 
 
 ## Problemi riscontrati e soluzioni addattate
+1) Ho fatto questa scelta perché lavorare su un JFrame a oggetti era troppo complicato da gestire e, data la formazione appena effettuata, ho deciso di trasferirmi su un JFrame contenente dei JPanel
 ## Punto della situazione rispetto alla pianificazione
-Un pochino indietro
+
 ## Programma di massima per la prossima giornata di lavoro
-Specchiare completamente fiocco
+trasformare tutti in JFrame contenente JPanel
