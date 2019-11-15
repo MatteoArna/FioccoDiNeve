@@ -7,11 +7,9 @@
 - SAM, Informatica, Modulo 306
 - 06/09/2019 - 20/12/2019
 ### Abstract
-Il progetto Fiocco di Neve è un progetto da realizzare nel primo semestre del terzo anno nella Scuola Arti e Mestieri di Trevano della sezione Informatica. Questo progetto consiste nel realizzare un fiocco di neve partendo da una base rettangolare (con angoli 30, 60, 90)che poi verrà specchiato fino a creare il riusltato.
+Con questo progetto intendo sviluppare un programma (realizzato con Java) che si occuperà di generare un fiocco di neve partendo da un triangolo dove si possono fare dei tagli a proprio piacimento. Una volta che il fiocco sarà generato sarà disponibile il salvataggio dell'immagine in formati diversi.
 ### Scopo
-Fare un programma che da un triangolo ritagliato dall'utente generi un fiocco di neve che può essere salvato o modificato.
-
-
+Lo scopo finale è riuscire a gestire nella maniera più ottimale possibile un progetto in maniera autonoma.
 ## Analisi
 ---
 ### Analisi del dominio
@@ -20,38 +18,168 @@ Possibilmente il programma finale dovrebbe essere facilmente intuibile ed utiliz
 I requisiti sono elencati nella seguente tabella: 
 [requisiti](requisiti.md)
 ### Use case
+Le funzioni che il fiocco avrà saranno il salvataggio del triangolo iniziale (quello dal quale poi si ricava il fiocco di neve) e il fiocco effettivo. Oltre a questo i poligoni sul triangolo dovranno essere il più modificabili possibile.
 ### Pianificazione
-[Gantt Iniziale](FioccoIniziale.pdf)
-[Gantt Finale](FioccoAggiornato.pdf)
+[Gantt Iniziale](FioccoIniziale.pdf)<br>
+[Gantt Finale] --> Coming soon
 ### Analisi dei mezzi
 I mezzi disponibili per questo progetto sono:
 <br>
-1. Computer Personale (Acer Aspire 5)
-2. JDK e JRE versione 12.0.2
-3. Server Infomaniak
+- Computer Personale (Acer Aspire 5)
+- JDK e JRE versione 12.0.2
+- Server Infomaniak
 ## Progettazione
----
-### interfaccia grafica 
-- <b>Sito Web</b>
-    <br>
-    Il Sito Web conterrà una guida veloce (quick guide) sul programma e il link per scaricarlo. Il collegamento sarà a GitHub dove prendererà il file .jar, invece in github sarà disponibile anche il .class. Il sito avrà circa il seguente layout:
-    <br>
-    <img src="../Img/SitoWeb.jpg" alt="layout">
-    Come si può vedere dal layout il sito sarà disponibile anche da mobile è sarà comunque scaricabile il programma. Nonostante questo però per eseguirlo bisognerà spostarsi su un computer.
-- <b>Programma</b>
-    <br>
-    Il programma si avvierà con una schermata grande 1024px x 768px e presenterà 3 diverse interfacce, ovvero:
-    <br>
-         La schermata che si aprirà quando lanceremo il programma. Da qui sarà possibile aprire i fiocchi di neve recenti (in caso che non ci siano la schermata di sinsitra comparirà vuota). Inoltre in alto a destra sarà presente un bottone con un "+" che ci permetterà di creare un nuovo fiocco di neve. Quando apriamo un file recente non verrà aperta l'immagine ma il triangolo con i tagli, questo verrà salvato ogni volta che salveremo il fiocco di neve o quando creeremo uno snapshot. 
-        <img src="../Img/HomePage.jpg" alt="Home page">
-        <hr>
-        Nella scheda principale sarà possibile modificare il triangolo in modo da creare il fiocco di neve perfetto. Di default premendo sul triangolo creeremo un punto (che con tutti gli altri faranno il poligono per taglia il triangolo), ma è possibile anche eliminare i punti selezionato il radio-button "cut" e spostarli tenendone premuto uno e muovendo il mouse. Premendo il tasto reset il triangolo verrà ripristinato alla struttura iniziale. Spuntando il check box "live generation" sarà possibile visualizzare il fiocco di neve mentre aggiungiamo punti al triangolo e premendo su create snapshot faremo un salvataggio del triangolo attuale (se presenti due dello stesso il più vecchio verrà sovrascritto). Il bottone generate genererà il fiocco di neve (solo se live-generation sarà disattivato) senza salvarlo e il bottone save porterà alla schermata di salvataggio.
-        <img src="../Img/SchedaPrincipale.jpg" alt="Scheda principale">
-        Il menù di salvataggio conterrà in alto a sinistra un'anteprima del fiocco di neve che avremo appena creato mentre a destra le impostazioni di salvataggio. Queste opzioni saranno <i>Nome</i> (il nome del fiocco di neve, default SnowFlake \<idDelFiocco>), <i> Destinazione </i> (la destinazione dove salvare il fiocco, senza valore o con valore errato da errore), <i>Tipo</i> (a scelta tra png 500 x 500, png 1000 x 1000, svg; default png 500x500).
-        <img src="../Img/MenuSalvataggio.jpg" alt="Menu Salvataggio"/>
-### Struttura
-Il programma si basa su una classe che rappresenta il Frame e altre 3 che rappresentano le altre schermate (vedi sopra) e le disegna sopra al Frame.
+### Design dell’architettura del sistema
+
+    Il triangolo verrà sempre centrato tramite l'utilizzo di una classe (TriangleModel) che in base alla dimensione del panel sarà sempre in grado di ritornare le dimensioni appropriate per il pannello corrente. Il salvataggio del triangolo viene fatto in un file csv che avrà nella posizione "a" la posizione X di un punto e nel "b" la Y (ovviamente riferiti al modello del triangolo).
+### Design delle interfacce
+
+[Pagina home](../Img/HomePage.jpg)
+<br>[Pagina di salvataggio](../Img/menuSalvataggio.jpg)
+<br>[Scheda Principale](../Img/SchedaPrincipale.jpg)
+<br>[Sito Web](../Img/SitoWeb.jpg)
+
+### Design procedurale
+
+[Link JavaDoc del progetto]()
+
 ## Implementazione
 
+In questo capitolo dovrà essere mostrato come è stato realizzato il
+lavoro. Questa parte può differenziarsi dalla progettazione in quanto il
+risultato ottenuto non per forza può essere come era stato progettato.
+
+Sulla base di queste informazioni il lavoro svolto dovrà essere
+riproducibile.
+
+In questa parte è richiesto l’inserimento di codice sorgente/print
+screen di maschere solamente per quei passaggi particolarmente
+significativi e/o critici.
+
+Inoltre dovranno essere descritte eventuali varianti di soluzione o
+scelte di prodotti con motivazione delle scelte.
+
+Non deve apparire nessuna forma di guida d’uso di librerie o di
+componenti utilizzati. Eventualmente questa va allegata.
+
+Per eventuali dettagli si possono inserire riferimenti ai diari.
+
+## Test
+
+### Protocollo di test
+
+Definire in modo accurato tutti i test che devono essere realizzati per
+garantire l’adempimento delle richieste formulate nei requisiti. I test
+fungono da garanzia di qualità del prodotto. Ogni test deve essere
+ripetibile alle stesse condizioni.
 
 
+|Test Case      | TC-001                               |
+|---------------|--------------------------------------|
+|**Nome**       |Import a card, but not shown with the GUI |
+|**Riferimento**|REQ-012                               |
+|**Descrizione**|Import a card with KIC, KID and KIK keys with no obfuscation, but not shown with the GUI |
+|**Prerequisiti**|Store on local PC: Profile\_1.2.001.xml (appendix n\_n) and Cards\_1.2.001.txt (appendix n\_n) |
+|**Procedura**     | - Go to “Cards manager” menu, in main page click “Import Profiles” link, Select the “1.2.001.xml” file, Import the Profile - Go to “Cards manager” menu, in main page click “Import Cards” link, Select the “1.2.001.txt” file, Delete the cards, Select the “1.2.001.txt” file, Import the cards |
+|**Risultati attesi** |Keys visible in the DB (OtaCardKey) but not visible in the GUI (Card details) |
+
+
+### Risultati test
+
+Tabella riassuntiva in cui si inseriscono i test riusciti e non del
+prodotto finale. Se un test non riesce e viene corretto l’errore, questo
+dovrà risultare nel documento finale come riuscito (la procedura della
+correzione apparirà nel diario), altrimenti dovrà essere descritto
+l’errore con eventuali ipotesi di correzione.
+
+### Mancanze/limitazioni conosciute
+
+Descrizione con motivazione di eventuali elementi mancanti o non
+completamente implementati, al di fuori dei test case. Non devono essere
+riportati gli errori e i problemi riscontrati e poi risolti durante il
+progetto.
+
+## Consuntivo
+
+Consuntivo del tempo di lavoro effettivo e considerazioni riguardo le
+differenze rispetto alla pianificazione (cap 1.7) (ad esempio Gannt
+consuntivo).
+
+## Conclusioni
+
+Quali sono le implicazioni della mia soluzione? Che impatto avrà?
+Cambierà il mondo? È un successo importante? È solo un’aggiunta
+marginale o è semplicemente servita per scoprire che questo percorso è
+stato una perdita di tempo? I risultati ottenuti sono generali,
+facilmente generalizzabili o sono specifici di un caso particolare? ecc
+
+### Sviluppi futuri
+  Migliorie o estensioni che possono essere sviluppate sul prodotto.
+
+### Considerazioni personali
+  Cosa ho imparato in questo progetto? ecc
+
+## Bibliografia
+
+### Bibliografia per articoli di riviste
+1.  Cognome e nome (o iniziali) dell’autore o degli autori, o nome
+    dell’organizzazione,
+
+2.  Titolo dell’articolo (tra virgolette),
+
+3.  Titolo della rivista (in italico),
+
+4.  Anno e numero
+
+5.  Pagina iniziale dell’articolo,
+
+### Bibliografia per libri
+
+
+1.  Cognome e nome (o iniziali) dell’autore o degli autori, o nome
+    dell’organizzazione,
+
+2.  Titolo del libro (in italico),
+
+3.  ev. Numero di edizione,
+
+4.  Nome dell’editore,
+
+5.  Anno di pubblicazione,
+
+6.  ISBN.
+
+### Sitografia
+
+1.  URL del sito (se troppo lungo solo dominio, evt completo nel
+    diario),
+
+2.  Eventuale titolo della pagina (in italico),
+
+3.  Data di consultazione (GG-MM-AAAA).
+
+**Esempio:**
+
+-   http://standards.ieee.org/guides/style/section7.html, *IEEE
+    Standards Style Manual*, 07-06-2008.
+
+## Allegati
+
+Elenco degli allegati, esempio:
+
+-   Diari di lavoro
+
+-   Codici sorgente/documentazione macchine virtuali
+
+-   Istruzioni di installazione del prodotto (con credenziali
+    di accesso) e/o di eventuali prodotti terzi
+
+-   Documentazione di prodotti di terzi
+
+-   Eventuali guide utente / Manuali di utilizzo
+
+-   Mandato e/o Qdc
+
+-   Prodotto
+
+-   …
