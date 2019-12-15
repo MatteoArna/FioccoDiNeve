@@ -42,10 +42,6 @@
 
   - [Considerazioni personali](#considerazioni-personali)
 
-1. [Sitografia](#sitografia)
-
-1. [Allegati](#allegati)
-
 
 ## Introduzione
 
@@ -85,7 +81,7 @@ L'utente potrà tagliare il suo triangolo e generarlo, il triangolo potrà esser
 ### Pianificazione
 
 [Diagramma di gantt iniziale](FioccoIniziale.pdf)<br>
-[Diagramma di gantt finale]() disponibile a fine progetto 
+[Diagramma di gantt finale](FioccoFinale.pdf) 
 
 ### Analisi dei mezzi
 
@@ -123,173 +119,98 @@ Il software sarà sviluppato in maniera che il triangolo da tagliare sarà sempr
 
 Per poter facilitare il più possibile la realizzazione del programma è stata sviluppata una classe chiamata [TriangleModel](../Other/TriangleModel.java) che permette di gestire dei punti su un triangolo. Oltre a fare questo la classe si occupa da sola di ridimensionare i punti in base alla grandezza della fienstra.
 
-### Schema E-R, schema logico e descrizione.
-
-Se il diagramma E-R viene modificato, sulla doc dovrà apparire l’ultima
-versione, mentre le vecchie saranno sui diari.
-
 ### Design delle interfacce
 
-Descrizione delle interfacce interne ed esterne del sistema e
-dell’interfaccia utente. La progettazione delle interfacce è basata
-sulle informazioni ricavate durante la fase di analisi e realizzata
-tramite mockups.
+[Home Page](../Img/HomePage.jpg)<br>
+[Save Page](../Img/MenuSalvataggio.jpg)<br>
+[Main Page](../Img/SchedaPrincipale.jpg)<br>
+[Web Site](../Img/SitoWeb.jpg)
+
+Le interfaccie WEB sono state praticamente tutte modificate alla fine del progetto, per i seguenti motivi:<br>
+- <b>Home Page</b>: La Home Page è scomparsa completamente siccome sarebbe risultata estremamente vuota, per oviare a questa mancanza i comandi che erano al suo interno (aprire un triangolo e la guida) sono stati inglobati nella pagina principale.
+- <b>Save Page</b>: La pagina di salvataggio è cambiata abbastanza, infatti il triangolo è diventato grande il 50% della finestra e posizionato sulla sinistra, invece la scelta della directory è stata sostituita con quella di default di windows (in modo che sia più familiare per gli utenti e più facile da gestire).
+- <b>Main Page</b>: La pagina principale è quella che è rimasta più fedele all'originale, a parte qualche bottone in più e la suddivisione delle opzioni tra sinistra, dove si trovando i comandi legati ai punti, e a destra, gli altri comandi. Oltre ciò il fiocco di neve non viene più generato in basso a destra perché risultava estremamente piccolo, ma invece su un'altra finestra.
+- <b>Sito Web</b>: Il sito web è cambiato completamente, al posto di seguire il mio personale stile ho preferito prendere un template e modificarlo in modo da renderlo perfetto per me.
 
 ### Design procedurale
-
-Descrive i concetti dettagliati dell’architettura/sviluppo utilizzando
-ad esempio:
-
--   Diagrammi di flusso e Nassi.
-
--   Tabelle.
-
--   Classi e metodi.
-
--   Tabelle di routing
-
--   Diritti di accesso a condivisioni …
-
-Questi documenti permetteranno di rappresentare i dettagli procedurali
-per la realizzazione del prodotto.
-
+[Documentazione del progetto](../Other/Doc/index.html)
 ## Implementazione
 
-In questo capitolo dovrà essere mostrato come è stato realizzato il
-lavoro. Questa parte può differenziarsi dalla progettazione in quanto il
-risultato ottenuto non per forza può essere come era stato progettato.
-
-Sulla base di queste informazioni il lavoro svolto dovrà essere
-riproducibile.
-
-In questa parte è richiesto l’inserimento di codice sorgente/print
-screen di maschere solamente per quei passaggi particolarmente
-significativi e/o critici.
-
-Inoltre dovranno essere descritte eventuali varianti di soluzione o
-scelte di prodotti con motivazione delle scelte.
-
-Non deve apparire nessuna forma di guida d’uso di librerie o di
-componenti utilizzati. Eventualmente questa va allegata.
-
-Per eventuali dettagli si possono inserire riferimenti ai diari.
+### Descrizione delle classi
+ - <b>TriangleModel: </b> Questa classe è stata sviluppata per fare in modo che un triangolo tagliato può sempre essere ridisegnato in un altro pannello con dimensioni diverse e comunque mantenere sempre le stesse proporzioni (con anche i punti disegnati sopra). Per fare in modo che questo avvenga la classe richiederà sempre la dimensione del pannello corrente quando si interagisce con essa in modo da poter trasformare i punti aggiunti/rimossi nelle dimensioni del modello. Questa classe verrà poi richiamata da praticamente tute le altre all'interno del progetto, in questa maniera le varie classi possono condividersi il triangolo senza passarsi troppi argomenti ma semplicemente un oggetto TriangleModel.
+ - <b>Preview</b>: Pannello che si occupa dio mostrare due tipi di preview durante il salvataggio, più specificatamente:
+ 1) <i>Salvataggio dei punti</i> quando verranno salvati i punti nel frame principale verrà affiancato un pannello contenente la preview del triangolo con i tagli.
+ 2) <i>Salvataggio del fiocco</i> quiando si salva l'immagine del fiocco di neve la preview cambierà e diventerà al posto del triangolo quella del fiocco di neve. Lo spazio occupato per entrambi sarà sempre lo stesso.
+ - <b>TrianlgePanel</b>: Interagiscew con la classe TriangleModel, i listener per il mouse sono situati in questa classe, che poi passa i punti al TriangleModel e in caso di esportazione lo passa lui. In questa maniera la classe TriangleModel rimane estremamente pulita e facilmente riutilizzabile in altre classi completamente diverse.
+ - <b>SaveFrame</b>: Frame di salvataggio, sia dei punti che del fiocco di neve (lo capisce grazie ad un valore booleano). In entrambi i casi però ci sarà diviso in due parti, a sinistra la preview di quello che si vuole salvare e a destra la scelta della directory e del nome del file.
+ - <b>SnowFrame</b>: Frame contenente il fiocco di neve generato, la generazione avverrà tramite un metodo setter che si occuperà di prendere il triangleModel e poi lo ruoterà in modo da generarlo in maniera perfetta. Adottando questa maniera di generare il fiocco il programma si può permettere di generare il fiocco in live, ovvero mentre tagliamo il triangolo in automatico il fiocco viene rigenerato (grazie ad una interfaccia del TrianglePanel).
+ - <b>TutorialFrame</b>: Frame che si occupa di dare una mini guida all'interno del programma all'utente, più specificatamente di ogni bottone che si visualizza a schermo e di ogni funzione. Questa guida è un poco meno completa di quella che si può trovare sul [sito ufficiale](http://www.samtinfo.ch/i17aremat/SnowFlake/).
+ - <b>TriangleEditFrame</b>: Frame principale del programma, quello che parte quando si avvia. Ovviamente è anche quello che interagisce con tutte le altre classi a parte TriangleModel perché  con quello ci interagiscono tutte le altri classi.
 
 ## Test
 
 ### Protocollo di test
 
-Definire in modo accurato tutti i test che devono essere realizzati per
-garantire l’adempimento delle richieste formulate nei requisiti. I test
-fungono da garanzia di qualità del prodotto. Ogni test deve essere
-ripetibile alle stesse condizioni.
-
-
-|Test Case      | TC-001                               |
+|Test Case      | TC-001                              |
 |---------------|--------------------------------------|
-|**Nome**       |Import a card, but not shown with the GUI |
-|**Riferimento**|REQ-012                               |
-|**Descrizione**|Import a card with KIC, KID and KIK keys with no obfuscation, but not shown with the GUI |
-|**Prerequisiti**|Store on local PC: Profile\_1.2.001.xml (appendix n\_n) and Cards\_1.2.001.txt (appendix n\_n) |
-|**Procedura**     | - Go to “Cards manager” menu, in main page click “Import Profiles” link, Select the “1.2.001.xml” file, Import the Profile - Go to “Cards manager” menu, in main page click “Import Cards” link, Select the “1.2.001.txt” file, Delete the cards, Select the “1.2.001.txt” file, Import the cards |
-|**Risultati attesi** |Keys visible in the DB (OtaCardKey) but not visible in the GUI (Card details) |
+|**Nome**       |Scaricare programma |
+|**Riferimento**|REQ-001                               |
+|**Descrizione**|Scaricare il programma dal sito ufficiale|
+|**Prerequisiti**|Avere un sito web dal quale poterlo scaricare|
+|**Procedura**     |Andare sul sito web, cliccare il tasto downlaod e vedere se funziona tutto|
+|**Risultati attesi** |Il programma dovrebbe scaricarsi funzionare perfettamente|
+|**Risultati**|Il programma non si scarica, da un errore riguardante i permessi |
+|**Come è stato risolto**| RISOLVERE |
 
+|Test Case      | TC-002                              |
+|---------------|--------------------------------------|
+|**Nome**       |Dimensione finestra|
+|**Riferimento**|REQ-004                               |
+|**Descrizione**|Provare a rimpicciolire la finestra, prima "manualmente" e poi provando a cambiare la risoluzione della finestra|
+|**Prerequisiti**|Impostare dimensione minima|
+|**Procedura**     |Fare partire il programma, rimpicciolire. Se non funziona andare nelle impostazioni di sistema, andare sotto risoluzione a abbassarla significatamente|
+|**Risultati attesi** |Il programma dovrebbe rimanere con una dimensione minima di 1024x768|
+|**Risultati**|Il programma rimane rispetta le aspettative e rimane di grandezza fissa, se si abbassa la risoluzione il programma sfora la grandezza dello schermo|
+|**Come è stato risolto**| -|
 
-### Risultati test
+|Test Case      | TC-003                              |
+|---------------|--------------------------------------|
+|**Nome**       |Reset dei punti|
+|**Riferimento**|REQ-008                               |
+|**Descrizione**|Fare il reset dei punti quando sono tanti e quando non ce ne sono|
+|**Prerequisiti**|Avere i punti funzionanti e implementare il bottone reset|
+|**Procedura**     |Fare partire il programma, aggiungere i punti, premere reset. Fatto questo premere reset anche senza punti.|
+|**Risultati attesi** |Il programma dovrebbe rimuovere tutti i punti nel primo caso e nel secondo non dovrebbbe sollevare alcun errore|
+|**Risultati**|Il programma rimane rispetta completamente le aspettative|
+|**Come è stato risolto**| -|
 
-Tabella riassuntiva in cui si inseriscono i test riusciti e non del
-prodotto finale. Se un test non riesce e viene corretto l’errore, questo
-dovrà risultare nel documento finale come riuscito (la procedura della
-correzione apparirà nel diario), altrimenti dovrà essere descritto
-l’errore con eventuali ipotesi di correzione.
+|Test Case      | TC-004                              |
+|---------------|--------------------------------------|
+|**Nome**       |Spostamento dei punti|
+|**Riferimento**|REQ-010                               |
+|**Descrizione**|Aggiungere dei punti e muoverli|
+|**Prerequisiti**|Avere i punti funzionanti|
+|**Procedura**     |Fare partire il programma, aggiungere i punti, muoverne uno al di fuori dell'area prescelta.|
+|**Risultati attesi** |I punti non dovrrebbero uscire dal pannello|
+|**Risultati**|I punti escono dal pannello|
+|**Come è stato risolto**| Questo punto non è stato risolto siccome se un utente aggiunge un punto al limite del pannello con lka visualizzazione a schermo intero quando rimpicciolisce la finestra i punti devono mantenere la stessa proporzione facendo uscire al di fuori del pannello i punti.|
 
 ### Mancanze/limitazioni conosciute
 
-Descrizione con motivazione di eventuali elementi mancanti o non
-completamente implementati, al di fuori dei test case. Non devono essere
-riportati gli errori e i problemi riscontrati e poi risolti durante il
-progetto.
+Le uncihe due mancanze del programma sono il salvataggio in png e l'aggiunta di più poligoni e le motivazioni sono le seguenti:
+per il primo non si è potuto salvare iun svg data la complicatezza della classe che permette di salvare l'immagine. Per la seconda invece non si possono aggiungere più poligoni perché il programma non lo permette per come è statop pensato dall'inizio.
 
 ## Consuntivo
 
-Consuntivo del tempo di lavoro effettivo e considerazioni riguardo le
-differenze rispetto alla pianificazione (cap 1.7) (ad esempio Gannt
-consuntivo).
+La pianificazione era sicuramente fatta in maniera estremamente sbagliata, in tempi erano irrelaistici per le consocenze che avevo. Oltre al tempo a disposizione ho dovuto sfruttare del tempon aggiuntivo, non solo a causa del ritardo ma soprattutto a causa che alcune lezioni sono saltate per altri impegni scolastici.
 
 ## Conclusioni
 
-Quali sono le implicazioni della mia soluzione? Che impatto avrà?
-Cambierà il mondo? È un successo importante? È solo un’aggiunta
-marginale o è semplicemente servita per scoprire che questo percorso è
-stato una perdita di tempo? I risultati ottenuti sono generali,
-facilmente generalizzabili o sono specifici di un caso particolare? ecc
+Grazie a questo progetto ho imparato pian piano a gestire un progetto al meglio. Sicuramente nel prossimo progetto avrò un comportamento molto più adeguato che mi permetterà di realizzare tutti e requisiti, un gantt realistico e una documentazione eccellente.
 
 ### Sviluppi futuri
-  Migliorie o estensioni che possono essere sviluppate sul prodotto.
+  In futuro si possono aggiugnere i requisiti non ancoa sviluppati, sicuramente con una pulizia del codice.
 
 ### Considerazioni personali
-  Cosa ho imparato in questo progetto? ecc
+  Con questo progetto, come detto nelle conclusioni, ho imparato a gestire al meglio un progetto, sia nella apte di progetazione che in quella di implemetnazione.
 
-## Bibliografia
-
-### Bibliografia per articoli di riviste
-1.  Cognome e nome (o iniziali) dell’autore o degli autori, o nome
-    dell’organizzazione,
-
-2.  Titolo dell’articolo (tra virgolette),
-
-3.  Titolo della rivista (in italico),
-
-4.  Anno e numero
-
-5.  Pagina iniziale dell’articolo,
-
-### Bibliografia per libri
-
-
-1.  Cognome e nome (o iniziali) dell’autore o degli autori, o nome
-    dell’organizzazione,
-
-2.  Titolo del libro (in italico),
-
-3.  ev. Numero di edizione,
-
-4.  Nome dell’editore,
-
-5.  Anno di pubblicazione,
-
-6.  ISBN.
-
-### Sitografia
-
-1.  URL del sito (se troppo lungo solo dominio, evt completo nel
-    diario),
-
-2.  Eventuale titolo della pagina (in italico),
-
-3.  Data di consultazione (GG-MM-AAAA).
-
-**Esempio:**
-
--   http://standards.ieee.org/guides/style/section7.html, *IEEE
-    Standards Style Manual*, 07-06-2008.
-
-## Allegati
-
-Elenco degli allegati, esempio:
-
--   Diari di lavoro
-
--   Codici sorgente/documentazione macchine virtuali
-
--   Istruzioni di installazione del prodotto (con credenziali
-    di accesso) e/o di eventuali prodotti terzi
-
--   Documentazione di prodotti di terzi
-
--   Eventuali guide utente / Manuali di utilizzo
-
--   Mandato e/o Qdc
-
--   Prodotto
-
--   …
