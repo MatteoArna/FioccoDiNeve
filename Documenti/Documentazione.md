@@ -116,14 +116,12 @@ Il software sarà sviluppato in maniera che il triangolo da tagliare sarà sempr
 
 ### Design dell’architettura del sistema
 
-[Diagramma UML](Img/UML.png)
-<img href="Img/UML.png">
+[Diagramma UML del progetto](../Img/UML.svg)
 
 
 ### Design dei dati e database
 
-Descrizione delle strutture di dati utilizzate dal programma in base
-agli attributi e le relazioni degli oggetti in uso.
+Per poter facilitare il più possibile la realizzazione del programma è stata sviluppata una classe chiamata [TriangleModel](../Other/TriangleModel.java) che permette di gestire dei punti su un triangolo. Oltre a fare questo la classe si occupa da sola di ridimensionare i punti in base alla grandezza della fienstra.
 
 ### Schema E-R, schema logico e descrizione.
 
