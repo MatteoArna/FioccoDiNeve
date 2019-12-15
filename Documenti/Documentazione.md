@@ -133,7 +133,7 @@ Le interfaccie WEB sono state praticamente tutte modificate alla fine del proget
 - <b>Sito Web</b>: Il sito web è cambiato completamente, al posto di seguire il mio personale stile ho preferito prendere un template e modificarlo in modo da renderlo perfetto per me.
 
 ### Design procedurale
-[Documentazione del progetto](../Other/Doc/index.html)
+[Documentazione del progetto](http://samtinfo.ch/i17aremat/SnowFlake/Doc/)
 ## Implementazione
 
 ### Descrizione delle classi
