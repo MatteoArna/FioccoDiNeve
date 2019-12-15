@@ -1,47 +1,168 @@
-# Fiocco Di Neve
+1. [Introduzione](#introduzione)
+
+  - [Informazioni sul progetto](#informazioni-sul-progetto)
+
+  - [Abstract](#abstract)
+
+  - [Scopo](#scopo)
+
+1. [Analisi](#analisi)
+
+  - [Analisi del dominio](#analisi-del-dominio)
+  
+  - [Analisi dei mezzi](#analisi-dei-mezzi)
+
+  - [Analisi e specifica dei requisiti](#analisi-e-specifica-dei-requisiti)
+
+  - [Use case](#use-case)
+
+  - [Pianificazione](#pianificazione)
+
+1. [Progettazione](#progettazione)
+
+  - [Design dell’architettura del sistema](#design-dell’architettura-del-sistema)
+
+  - [Design dei dati e database](#design-dei-dati-e-database)
+
+1. [Implementazione](#implementazione)
+
+1. [Test](#test)
+
+  - [Protocollo di test](#protocollo-di-test)
+
+  - [Risultati test](#risultati-test)
+
+  - [Mancanze/limitazioni conosciute](#mancanze/limitazioni-conosciute)
+
+1. [Consuntivo](#consuntivo)
+
+1. [Conclusioni](#conclusioni)
+
+  - [Sviluppi futuri](#sviluppi-futuri)
+
+  - [Considerazioni personali](#considerazioni-personali)
+
+1. [Sitografia](#sitografia)
+
+1. [Allegati](#allegati)
+
+
 ## Introduzione
----
+
 ### Informazioni sul progetto
-- Matteo Arena
-- Luca Muggiasca e Geo Petrini, <i>supervisori</i>
-- SAM, Informatica, Modulo 306
-- 06/09/2019 - 20/12/2019
+
+Progetto progettato e implementato interamente da Matteo Arena, allievo della SAM sezione Informatica per il modulo 306. <br>
+Data di inizio progetto: 2019.09.06
+Data di fine porogetto: 2019.12.20
+
 ### Abstract
-Con questo progetto intendo sviluppare un programma (realizzato con Java) che si occuperà di generare un fiocco di neve partendo da un triangolo dove si possono fare dei tagli a proprio piacimento. Una volta che il fiocco sarà generato sarà disponibile il salvataggio dell'immagine in formati diversi.
+
+  Il progetto Snow Flake Generator vuole essere un applicativo che genera dei fiocchi di neve 
+  nella maniera più facile e intuitivo possibile. Oltre ciò dispone anche di una documentazione
+  completa per fare in modo che gli utenti possano sfruttarla al meglio.
+
 ### Scopo
-Lo scopo finale è riuscire a gestire nella maniera più ottimale possibile un progetto in maniera autonoma.
+
+  Lo scopo è imparare a gestire al meglio un progetto. 
+
+
 ## Analisi
----
+
 ### Analisi del dominio
-Possibilmente il programma finale dovrebbe essere facilmente intuibile ed utilizzabile pure a persone inesperte di questo settore.
+
+Il prodotto potrà essere utilizzato da qualsiasi tipo di utente, con a disposizione un computer.
+Attualmente non ci sono molti generatori di fiocchi di neve e, quei pochi che ci sono si trovano
+online e molto spesso per questa causa vengono dimenticati i loro nomi. Per oviare a questo problema svilupperò un programma che permetterà a chiunque, grazie alla sua semplicità, di generare il suo personale fiocco di neve e poterlo condividere facilmente.
+
 ### Analisi e specifica dei requisiti
-I requisiti sono elencati nella seguente tabella: 
-[requisiti](requisiti.md)
+
+  [Lista di requisiti](requisiti.md)
+
 ### Use case
-Le funzioni che il fiocco avrà saranno il salvataggio del triangolo iniziale (quello dal quale poi si ricava il fiocco di neve) e il fiocco effettivo. Oltre a questo i poligoni sul triangolo dovranno essere il più modificabili possibile.
+
+L'utente potrà tagliare il suo triangolo e generarlo, il triangolo potrà essere sempre salvato per condividerlo o riaprirlo in futuro.
+
 ### Pianificazione
-[Gantt Iniziale](FioccoIniziale.pdf)<br>
-[Gantt Finale] --> Coming soon
+
+[Diagramma di gantt iniziale](FioccoIniziale.pdf)<br>
+[Diagramma di gantt finale]() disponibile a fine progetto 
+
 ### Analisi dei mezzi
-I mezzi disponibili per questo progetto sono:
-<br>
-- Computer Personale (Acer Aspire 5)
-- JDK e JRE versione 12.0.2
-- Server Infomaniak
+
+- Computer con Windows 10 (12.2019)
+- Java 1.12
+- NetBeans 8.2
+- Apache Batik (libreria per java)
+- Server di hosting infomaniak
+- HTML, CSS e JavaScript
+
+Il profotto potrà essere eseguito su qualsiasi macchina con un sistema operativo, infatti è stata
+progettata per essere eseguita Computer con Windows, MacOs e Linux. La richiesta hardware del programma è estremamente bassa, grazie a questo può contare sul fatto di essere eseguita su praticamente qualsiasi computer. <br>
+Durante lo sviluppo del programma verrà utilizzato un PC Acer Aspire 5 con hardware di gamma medio-alta, più precisamente un intel i7 di settima generazione, scheda grafica nvidia geforce 940mx e 16GB di RAM.
 ## Progettazione
+
+Il software sarà sviluppato in maniera che il triangolo da tagliare sarà sempre al centro. oltre ciò saranno disponibili i seguenti bottoni:<br>
+
+| Nome | Componente | utilizzo|
+|---|-----|---|
+|Add e Cut| Switch|Scelta tra aggiunta o rimozione di un punto, quando uno è abilitato l'altro si disabilita in automatico. Quando ci si trova sopra a un punto esso cambierà colore per dare la conferma all'utente che si trova al di sopra|
+|Reset|Bottone| Eliminazione di tutti i punti inseriti|
+|Back|Bottone|Eliminazione dell'ultimo punto inserito|
+|Preview| Checkbox| Visualizzazione del triangolo tagliato, prima di generare il fiocco.
+|Create snapshot|Bottone|Salvataggio dei punti del triangolo|
+|Open snapshot|Bottone|Apertura dei punti salvati in precedenza con il bottone Create Snapshot|
+|Generate|Bottone|Generazione del fiocco di neve, in un pannello piccolo in basso a destra oppure in un altra finestra|
+|Save|Bottone|Salvataggio del fiocco generato come immagine SVG o PNG (in dimensioni aatuali, 500px x 500px o 100px x 1000px)
+
 ### Design dell’architettura del sistema
 
-    Il triangolo verrà sempre centrato tramite l'utilizzo di una classe (TriangleModel) che in base alla dimensione del panel sarà sempre in grado di ritornare le dimensioni appropriate per il pannello corrente. Il salvataggio del triangolo viene fatto in un file csv che avrà nella posizione "a" la posizione X di un punto e nel "b" la Y (ovviamente riferiti al modello del triangolo).
+[Diagramma UML](Img/UML.svg)
+Descrive:
+
+-   La struttura del programma/sistema lo schema di rete...
+
+-   Gli oggetti/moduli/componenti che lo compongono.
+
+-   I flussi di informazione in ingresso ed in uscita e le
+    relative elaborazioni. Può utilizzare *diagrammi di flusso dei
+    dati* (DFD).
+
+-   Eventuale sitemap
+
+### Design dei dati e database
+
+Descrizione delle strutture di dati utilizzate dal programma in base
+agli attributi e le relazioni degli oggetti in uso.
+
+### Schema E-R, schema logico e descrizione.
+
+Se il diagramma E-R viene modificato, sulla doc dovrà apparire l’ultima
+versione, mentre le vecchie saranno sui diari.
+
 ### Design delle interfacce
 
-[Pagina home](../Img/HomePage.jpg)
-<br>[Pagina di salvataggio](../Img/menuSalvataggio.jpg)
-<br>[Scheda Principale](../Img/SchedaPrincipale.jpg)
-<br>[Sito Web](../Img/SitoWeb.jpg)
+Descrizione delle interfacce interne ed esterne del sistema e
+dell’interfaccia utente. La progettazione delle interfacce è basata
+sulle informazioni ricavate durante la fase di analisi e realizzata
+tramite mockups.
 
 ### Design procedurale
 
-[Link JavaDoc del progetto]()
+Descrive i concetti dettagliati dell’architettura/sviluppo utilizzando
+ad esempio:
+
+-   Diagrammi di flusso e Nassi.
+
+-   Tabelle.
+
+-   Classi e metodi.
+
+-   Tabelle di routing
+
+-   Diritti di accesso a condivisioni …
+
+Questi documenti permetteranno di rappresentare i dettagli procedurali
+per la realizzazione del prodotto.
 
 ## Implementazione
 
