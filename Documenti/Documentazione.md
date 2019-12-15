@@ -116,18 +116,9 @@ Il software sarà sviluppato in maniera che il triangolo da tagliare sarà sempr
 
 ### Design dell’architettura del sistema
 
-[Diagramma UML](Img/UML.svg)
-Descrive:
+[Diagramma UML](Img/UML.png)
+<img href="Img/UML.png">
 
--   La struttura del programma/sistema lo schema di rete...
-
--   Gli oggetti/moduli/componenti che lo compongono.
-
--   I flussi di informazione in ingresso ed in uscita e le
-    relative elaborazioni. Può utilizzare *diagrammi di flusso dei
-    dati* (DFD).
-
--   Eventuale sitemap
 
 ### Design dei dati e database
 
