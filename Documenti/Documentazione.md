@@ -133,7 +133,7 @@ Le interfaccie WEB sono state praticamente tutte modificate alla fine del proget
 - <b>Sito Web</b>: Il sito web è cambiato completamente, al posto di seguire il mio personale stile ho preferito prendere un template e modificarlo in modo da renderlo perfetto per me.
 
 ### Design procedurale
-[Documentazione del progetto](http://samtinfo.ch/i17aremat/SnowFlake/Doc/)
+[Documentazione codice del progetto](http://samtinfo.ch/i17aremat/SnowFlake/Doc/)
 ## Implementazione
 
 ### Descrizione delle classi
@@ -197,8 +197,8 @@ Le interfaccie WEB sono state praticamente tutte modificate alla fine del proget
 
 ### Mancanze/limitazioni conosciute
 
-Le uncihe due mancanze del programma sono il salvataggio in png e l'aggiunta di più poligoni e le motivazioni sono le seguenti:
-per il primo non si è potuto salvare iun svg data la complicatezza della classe che permette di salvare l'immagine. Per la seconda invece non si possono aggiungere più poligoni perché il programma non lo permette per come è statop pensato dall'inizio.
+Le uniche due mancanze del programma sono il salvataggio in png e l'aggiunta di più poligoni e le motivazioni sono le seguenti:
+per il primo non si è potuto salvare in svg data la complicatezza della classe che permette di salvare l'immagine. Per la seconda invece non si possono aggiungere più poligoni perché il programma non lo permette per come è statop pensato dall'inizio.
 
 ## Consuntivo
 
