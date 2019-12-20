@@ -9,6 +9,7 @@
 |--------------|--------------------------------------------|---------|
 |10:05 - 10:30| Fatto use case||
 |10:30 - 11:35| Corretta la grammatica della documentazione||
+|13:15 - 14:45| aggiornato use case
 
 
 ## Problemi riscontrati e soluzioni addattate
