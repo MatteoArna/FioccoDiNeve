@@ -126,12 +126,26 @@ si definiscono al massimo di 2-3 livelli di priorità.
 
 ### Use case
 
-<img src="../Img/useCase.png" alt="Immagine ritraente lo use case"/>
+<img src="Img/useCase.png" alt="Immagine ritraente lo use case"/>
 
 ### Pianificazione
 
-[Gantt Iniziale, concepito in fase di progettazione](FioccoIniziale.pdf)<br>
-[Gantt finale](FioccoFinale.pdf)
+**Attività concepite**
+
+<img src="img/AttivitàIniziali.png"  alt="Attività iniziali"/>
+
+**Gantt concepito**
+
+<img src="img/GanttIniziale1.png"  alt="Gantt iniziale 1"/>
+<img src="img/GanttIniziale2.png"  alt="Gantt iniziale 2"/>
+
+**Attività effettive**
+<img src="img/AttivitàFinali.png"  alt="Attività Finali"/>
+
+**Gantt effettivo**
+
+<img src="img/GanttFinale1.png"  alt="Gantt Finale 1"/>
+<img src="img/GanttFinale2.png"  alt="Gantt Finale 2"/>
 
 ### Analisi dei mezzi
 
@@ -158,27 +172,27 @@ L'applicativo è sviluppato per essere esguito su qualsiasi sistema operativo in
 ## Progettazione
 
 ### Design dell’architettura del sistema
-
- [Diagramma UML](../Img/UML.svg)
+ **Diagramma UML**
+ <img src="Img/UML.svg" alt="Diagramma UML del progetto"/>
 
 ### Design delle interfacce
 
 L'applicativo si dividerà in 4 schermate, più precisamente:
 
 1. **Pagina Iniziale**
-  <img src="../Img/HomePage.jpg" alt="Pagina iniziale">
+  <img src="Img/HomePage.jpg" alt="Pagina iniziale">
   Questa sarà la schermata visualizzata all'apertura del programma. A sinistra si possono trovare i fiocchi di neve recenti, in alto a destra il bottone per creare un nuovo fiocco di neve e in mezzo una breve descrizione del programma. 
 
 2. **Schermata principale** 
-  <img src="../Img/SchedaPrincipale.jpg" alt="Schermata principale">
+  <img src="Img/SchedaPrincipale.jpg" alt="Schermata principale">
   SChermata dalla quale si potrà modificare il triangolo per poi generare il fiocco di neve. I bottoni sono posti in maniera che in alto ci siano quelli per la modifica dei punti ed in basso quelli per il salvataggio e la creazione del fiocco di neve. Questa finestra avrà una dimensione minima di 1024 x 768 pixel e il triangolo occuperà sempre il 50% della finestra. In basso a destra si potrà trovare un piccolo pannello dove, se selezioniamo l'opzione "live gen", verrà visualizzato il fiocco di neve live mentre modifichiamo i punti sul triangolo. I punti sul triangolo manterranno sempre la stessa proporzione, in modo che se si aggiunge un punto con la finestra di dimensione x quando si ridimensionerà i punti rimarranno sempre nello stesso posto senza modificare il taglio effettivo.
 
 3. **Schermata di salvataggio**
-  <img src="../Img/MenuSalvataggio.jpg" alt="Schermata di salvataggio">
+  <img src="Img/MenuSalvataggio.jpg" alt="Schermata di salvataggio">
   Grazie a questa schermata, richiamata dal bottone "Save" e "Create Snapshot" si potranno salvare i propri dati. La struttura è fatta in modo da essere intuitiva per l'utente, proprio per questo basilare.
 
 4. **Sito Web**
-<img src="../Img/SitoWeb.jpg" alt="Sito Web">
+<img src="Img/SitoWeb.jpg" alt="Sito Web">
 Il Sito web è molto basilare ma contenente tutte le informazioni necessarie, molto probabilmente cambierà siccome verrà aggiunto un tab per la guida riguardate l'applicativo.
 
 ## Implementazione
