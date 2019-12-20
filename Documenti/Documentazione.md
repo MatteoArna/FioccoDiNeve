@@ -61,7 +61,7 @@
   - <i>Classe</i>: I3AA.
 ### Abstract
 
-  Con tutto lo stress che si accumula al giorno d'oggi c'è solo un modo per salvarsi, Snow Flake Generator! Prenditi un attimo e rilassati facendo il tuo personale fiocco di neve.
+  
 
 ### Scopo
 
@@ -135,11 +135,14 @@ si definiscono al massimo di 2-3 livelli di priorità.
 
 ### Analisi dei mezzi
 
+**Linguaggio di programmazione**
+- Java 12
+
 **Hardware**
 - Acer Aspire 5
 
 **Software**
-- Netbeans 8.1
+- Netbeans 11.1
 - Visual Studio Code
 - Git Hub Desktop
 
