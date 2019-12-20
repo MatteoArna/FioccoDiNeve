@@ -378,6 +378,22 @@ Una volta che si hanno questi due metodi non basta altro che usufruirne all'inte
                 g2.fill(rotateArea((i - 1) * 60, getFlippedArea(finalArea)));
                 g2.fill(rotateArea(i * 60, finalArea));
             }
+
+
+### Cambiamento di design
+  
+  * **Pagina iniziale**: La pagina iniziale non esiste più, questa scelta è stata intrapresa a causa del fatoo che sarebbe stata inutile. Per rendere il programma meno complicato per l'utente questa schermata è stata assorbita dalla pagina principale (dove si modifica il triangolo).
+  * **Pagina principale**: Nella pagina principale sono state aggiunte diverse funzioni, che sono necessarie per il corretto funzionamento del programma. I 2 menù non sono più divisi solo da un lato ma sono completamente separati (ora i bottoni che interagiscono con i punti sono a sinistra e gli altri a destra). Tra le cose aggiunte troviamo 
+
+    1. *undo* per eliminare l'ultimo punto
+    2. *Tutorial* mostra un mini tutorial all'utente sulle funzioni del programma
+    3. *live-preview* è stata eliminata per renderla sempre attiva quando si genera il fiocco, infatti non si trova più in basso a destra ma in un'altra finestra (nel primo caso risultava molto piccolo e difficile da capire).
+    4. *nome del triangolo corrente* sempre in basso a sinistra
+    5. *posizione del mouse* in pixel e sempre leggibile in basso
+
+* **Pagina di salvataggio**: La finestra di salvataggio è diventata la classica di Windows (per semplicità) ma affiancata dalla preview di quello che stiamo per salvare. Quando salviamo i punti la preview ci farà vedere il triangolo tagliato, mentre quando salviamo il fiocco la preview mostrerà il fiocco generato.
+
+* **Sito Web**: come potevo dedurre dall'inizio il sito web è cambiato drasticamente, adesso è molto più esteso, con una guida, i requisiti e un'apposita finestra per il download. Oltre a tutto ciò è stato aggiunto anche un form per fare in modo che gli utenti possano chiedere aiuto all'autore o riferirgli dei bug
 ## Test
 
 ### Protocollo di test
