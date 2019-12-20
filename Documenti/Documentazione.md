@@ -76,7 +76,6 @@
   Il progetto viene realizzato per imparare a gestire un mandato, soprattutto in preparazione del test di quarta ma anche per prepararci in caso che in un futuro lavoro dovremo utilizzare queste conoscenze.
 ### Analisi e specifica dei requisiti
 
-
   # Requisiti
 
   **Spiegazione elementi tabella dei requisiti:**
@@ -182,7 +181,7 @@ L'applicativo si dividerà in 4 schermate, più precisamente:
   <img src="Img/HomePage.jpg" alt="Pagina iniziale">
   Questa sarà la schermata visualizzata all'apertura del programma. A sinistra si possono trovare i fiocchi di neve recenti, in alto a destra il bottone per creare un nuovo fiocco di neve e in mezzo una breve descrizione del programma. 
 
-2. **Schermata principale** 
+2. **Schermata principale**
   <img src="Img/SchedaPrincipale.jpg" alt="Schermata principale">
   SChermata dalla quale si potrà modificare il triangolo per poi generare il fiocco di neve. I bottoni sono posti in maniera che in alto ci siano quelli per la modifica dei punti ed in basso quelli per il salvataggio e la creazione del fiocco di neve. Questa finestra avrà una dimensione minima di 1024 x 768 pixel e il triangolo occuperà sempre il 50% della finestra. In basso a destra si potrà trovare un piccolo pannello dove, se selezioniamo l'opzione "live gen", verrà visualizzato il fiocco di neve live mentre modifichiamo i punti sul triangolo. I punti sul triangolo manterranno sempre la stessa proporzione, in modo che se si aggiunge un punto con la finestra di dimensione x quando si ridimensionerà i punti rimarranno sempre nello stesso posto senza modificare il taglio effettivo.
 
