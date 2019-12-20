@@ -60,7 +60,7 @@
   - <i>Classe</i>: I3AA.
 ### Abstract
 
-    Con questo progetto si intende realizzare un programma che permetta di fare dei fiocchi di neve partendo da un semplice triangolo. Il procedimento è uguale a quello che faresti su carta, ma molto più facile e soprattutto più veloce.
+  Con questo progetto si intende realizzare un programma che permetta di fare dei fiocchi di neve partendo da un semplice triangolo. Il procedimento è uguale a quello che faresti su carta, ma molto più facile e soprattutto più veloce.
 
 ### Scopo
 
